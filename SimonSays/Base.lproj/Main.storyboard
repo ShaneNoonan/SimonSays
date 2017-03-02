@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimonSays" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-s0-hJ2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj4-ge-fhR">
+                                <rect key="frame" x="191.5" y="272.5" width="167.5" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="LfW-Kg-KNE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SimonSays" translatesAutoresizingMaskIntoConstraints="NO" id="QGd-Bu-uVN">
+                                <rect key="frame" x="16" y="20" width="343" height="244.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxt-Lo-L4r">
+                                <rect key="frame" x="16" y="272.5" width="167.5" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Ej8-Jm-GtD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simon Says..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="OQX-cR-XNl">
+                                <rect key="frame" x="16" y="326.5" width="343" height="244.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSU-kS-soi">
+                                <rect key="frame" x="16" y="579" width="343" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="uit-Of-mJw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="45"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ROL-Dt-2WN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KSU-kS-soi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="11g-cr-Og3"/>
+                            <constraint firstItem="OQX-cR-XNl" firstAttribute="top" secondItem="Qxt-Lo-L4r" secondAttribute="bottom" constant="8" id="1NM-mm-EIG"/>
+                            <constraint firstItem="cj4-ge-fhR" firstAttribute="top" secondItem="QGd-Bu-uVN" secondAttribute="bottom" constant="8" id="6HO-Hn-Jhp"/>
+                            <constraint firstItem="cj4-ge-fhR" firstAttribute="width" secondItem="Qxt-Lo-L4r" secondAttribute="width" id="8YG-92-tyh"/>
+                            <constraint firstItem="OQX-cR-XNl" firstAttribute="height" secondItem="QGd-Bu-uVN" secondAttribute="height" id="8il-Et-lTZ"/>
+                            <constraint firstItem="QGd-Bu-uVN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BVq-Mw-M3x"/>
+                            <constraint firstItem="zcK-s0-hJ2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="D1I-Xp-ymg"/>
+                            <constraint firstItem="KSU-kS-soi" firstAttribute="top" secondItem="OQX-cR-XNl" secondAttribute="bottom" constant="8" id="GUf-G8-C1I"/>
+                            <constraint firstItem="OQX-cR-XNl" firstAttribute="top" secondItem="cj4-ge-fhR" secondAttribute="bottom" constant="8" id="JJ3-tF-MhN"/>
+                            <constraint firstItem="QGd-Bu-uVN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KXc-jA-bSe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KSU-kS-soi" secondAttribute="bottom" constant="20" id="Pbr-gU-ptf"/>
+                            <constraint firstItem="zcK-s0-hJ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XLz-RA-cFs"/>
+                            <constraint firstItem="cj4-ge-fhR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZwV-Yd-EZM"/>
+                            <constraint firstItem="Qxt-Lo-L4r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ckt-Fn-lQZ"/>
+                            <constraint firstItem="OQX-cR-XNl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fpb-S4-Bnt"/>
+                            <constraint firstItem="KSU-kS-soi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lSH-YA-o5g"/>
+                            <constraint firstAttribute="trailing" secondItem="zcK-s0-hJ2" secondAttribute="trailing" id="oK1-YI-fti"/>
+                            <constraint firstItem="Qxt-Lo-L4r" firstAttribute="top" secondItem="QGd-Bu-uVN" secondAttribute="bottom" constant="8" id="pb5-74-h35"/>
+                            <constraint firstItem="cj4-ge-fhR" firstAttribute="leading" secondItem="Qxt-Lo-L4r" secondAttribute="trailing" constant="8" id="qj1-fx-ckh"/>
+                            <constraint firstItem="OQX-cR-XNl" firstAttribute="height" secondItem="QGd-Bu-uVN" secondAttribute="height" id="srJ-u1-2lk"/>
+                            <constraint firstItem="OQX-cR-XNl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tGc-f8-tVi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zcK-s0-hJ2" secondAttribute="bottom" id="uE8-7S-biu"/>
+                            <constraint firstItem="QGd-Bu-uVN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ufb-Yz-7ZP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="cj4-ge-fhR" id="T5E-sP-c3s"/>
+                        <outlet property="simonLabel" destination="OQX-cR-XNl" id="la3-s6-b8C"/>
+                        <outlet property="startButton" destination="KSU-kS-soi" id="3qv-LG-Zui"/>
+                        <outlet property="timerLabel" destination="Qxt-Lo-L4r" id="a2E-ub-NBm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1200"/>
+        <image name="SimonSays" width="1000" height="707"/>
+    </resources>
 </document>
